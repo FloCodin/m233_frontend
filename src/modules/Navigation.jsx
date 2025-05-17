@@ -19,6 +19,9 @@ export default function Navigation() {
         <li>
           <a href="/login">Login</a>
         </li>
+        <li>
+          <a href="/movies">Movies</a>
+        </li>
       </ul>
     </nav>
   )

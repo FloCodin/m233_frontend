@@ -9,6 +9,7 @@ import Public from "./modules/Public.jsx";
 import Private from "./modules/Private.jsx";
 import Login from "./components/Login.jsx";
 import AuthService from "./services/auth.service.js";
+import MovieList from "./pages/MovieList.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="public" element={<Public />} />
         <Route path="private" element={<Private />} />
+        <Route path="/movies" element={<MovieList />} />
         <Route path="login" element={<Login  />}  />
         <Route path="*" element={<NoPage />} />
       </Route>
