@@ -19,10 +19,11 @@ function Login() {
                 position: "top-right",
                 autoClose: 3000,
             });
-            navigate("/"); // oder z. B. "/movies"
+            navigate("/"); // oder  "/movies"
             console.log(res);
         } catch (error) {
             toast.error("❌ Login fehlgeschlagen");
+            console.log(error);
         }
     };
 
