@@ -10,6 +10,15 @@ export default function Navigation() {
         <li>
           <a href="/about">About</a>
         </li>
+        <li>
+          <a href="/Public">Public</a>
+        </li>
+        <li>
+          <a href="/Private">Private</a>
+        </li>
+        <li>
+          <a href="/login">Login</a>
+        </li>
       </ul>
     </nav>
   )
