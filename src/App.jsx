@@ -8,6 +8,9 @@ import Private from "./modules/Private";
 import Login from "./components/Login";
 import MovieList from "./pages/MovieList";
 import {ToastContainer} from "react-toastify";
+import TmdbSearch from "./pages/TmdbSearch.jsx";
+import MyRatings from "./pages/MyRatings";
+import WatchlistPage from "./pages/WatchlistPage.jsx";
 
 function App() {
     return (
@@ -22,7 +25,11 @@ function App() {
                     <Route path="private" element={<Private/>}/>
                     <Route path="login" element={<Login/>}/>
                     <Route path="movies" element={<MovieList/>}/>
+                    <Route path="/tmdb" element={<TmdbSearch/>}/>
                     <Route path="*" element={<NoPage/>}/>
+                    <Route path="my-ratings" element={<MyRatings />} />
+                    <Route path="watchlist" element={<WatchlistPage />} />
+
                 </Route>
             </Routes>
         </div>
