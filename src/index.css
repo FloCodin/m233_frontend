@@ -1,13 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 :root {
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
     background-color: #000000;
-}
-body {
-    margin: 0;
-    background-color: #e41010;
-    color: black;
 }
