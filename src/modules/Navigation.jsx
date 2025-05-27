@@ -11,11 +11,19 @@ export default function Navigation() {
                 {/* Navigation links */}
                 <div className="flex gap-6 items-center text-lg font-medium">
                     <Link className="hover:text-yellow-300 transition" to="/">Home</Link>
-                    <Link className="hover:text-yellow-300 transition" to="/about">About</Link>
-                    <Link className="hover:text-yellow-300 transition" to="/public">Public</Link>
+                    {/* <Link className="hover:text-yellow-300 transition" to="/about">About</Link>
+
                     {user && <Link className="hover:text-yellow-300 transition" to="/private">Private</Link>}
+                    <Link className="hover:text-yellow-300 transition" to="/public">Public</Link> */}
+                    <Link className="hover:text-yellow-300 transition" to="/tmdb">TMDB</Link>
+
                     {user && <Link className="hover:text-yellow-300 transition" to="/movies">Movies</Link>}
-                    {!user && <Link className="hover:text-yellow-300 transition" to="/login">Login</Link>}
+
+                    {user && <Link className="hover:text-yellow-300 transition" to="/my-ratings">Rezensionen</Link>}
+                    <Link to="/watchlist" className="hover:text-yellow-300">Watchlist</Link>
+
+
+                    {/*!user && */  <Link className="hover:text-yellow-300 transition" to="/login">Login</Link> }
                 </div>
 
                 {/* User info */}
