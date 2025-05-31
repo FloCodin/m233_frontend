@@ -1,19 +1,27 @@
 import React, { useState } from "react";
 import AuthService from "../services/auth.service";
 import { toast } from "react-toastify";
-import RatingForm from "./RatingForm"; // wichtig: korrekt importieren
+import RatingForm from "./RatingForm";
+import WatchlistService from "../services/watchlist.service.js";
 
 export default function MovieCard({ movie }) {
     const user = AuthService.getCurrentUser();
     const [showRatingForm, setShowRatingForm] = useState(false);
 
-    const handleWatchlistClick = () => {
-        toast.success("Zur Watchlist hinzugefügt! ⚡");
+    const handleWatchlistClick = async () => {
+        try {
+            await WatchlistService.addToWatchlist(movie.id);
+            toast.success("Zur Watchlist hinzugefügt! ⚡");
+        } catch (err) {
+            console.error("Fehler beim Hinzufügen zur Watchlist:", err);
+            toast.error("Fehler beim Hinzufügen zur Watchlist ❌");
+        }
     };
+
 
     const handleReviewClick = () => {
         toast.info("Rezensionsformular öffnet sich...");
-        setShowRatingForm(true); // öffnet Formular
+        setShowRatingForm(true);
     };
 
     return (
