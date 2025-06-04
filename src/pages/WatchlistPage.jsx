@@ -36,7 +36,7 @@ export default function WatchlistPage() {
             <h1 className="text-3xl font-bold mb-6">🎞️ Meine Watchlist</h1>
 
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {watchlist.map(({ movie, rating }) => (
+                {watchlist.map( (movie) => (
                     <div key={movie.id} className="bg-gray-800 p-4 rounded shadow">
                         {movie.poster_path && (
                             <img
@@ -48,13 +48,6 @@ export default function WatchlistPage() {
                         <h2 className="text-xl font-bold text-white">{movie.title}</h2>
                         <p className="text-sm text-gray-400">{movie.release_date}</p>
                         <p className="text-sm mt-2 text-gray-300">{movie.overview}</p>
-
-                        {rating && (
-                            <div className="mt-4 bg-gray-700 p-3 rounded">
-                                <p className="text-yellow-400 font-semibold">⭐ {rating.score}/5</p>
-                                {rating.comment && <p className="mt-1 text-gray-200">{rating.comment}</p>}
-                            </div>
-                        )}
 
                         <button
                             onClick={() => removeMovie(movie.id)}

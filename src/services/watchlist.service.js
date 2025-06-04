@@ -18,8 +18,8 @@ const getMyWatchlist = () => {
  * Fügt einen Film zur Watchlist hinzu
  * @param {number} movieId
  */
-const addToWatchlist = (movieId) => {
-    return axios.post(`${API_URL}/${movieId}`, null, {
+const addToWatchlist = (movie) => {
+    return axios.post(`${API_URL}/`, movie, {
         headers: authHeader(),
     });
 };

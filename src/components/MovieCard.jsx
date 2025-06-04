@@ -10,7 +10,7 @@ export default function MovieCard({ movie }) {
 
     const handleWatchlistClick = async () => {
         try {
-            await WatchlistService.addToWatchlist(movie.id);
+            await WatchlistService.addToWatchlist({"id": movie.id, "title": movie.title, "poster_path": movie.poster_path});
             toast.success("Zur Watchlist hinzugefügt! ⚡");
         } catch (err) {
             console.error("Fehler beim Hinzufügen zur Watchlist:", err);
